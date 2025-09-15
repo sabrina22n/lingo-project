@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lingolia Modelo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
     <!-- Header -->
     <header class="headerBar">
         <div class="headerContainer">
+            <!-- Botón hamburguesa a la izquierda -->
+            <button id="menuToggle" class="menuToggle">☰</button>
+
             <div class="logoBox">
                 <span class="logoIcon">📘</span>
                 <span class="logoText">lingolia <strong>español</strong></span>
             </div>
-            <button class="menuToggle">☰</button>
         </div>
     </header>
-
     <div class="mainLayout">
         <!-- Sidebar -->
-        <aside class="sideNav">
-            <div class="searchBox">
+        <aside id="sideNav" class="sideNav">
+            <!-- <div class="searchBox">
                 <input type="text" placeholder="Search" class="searchInput">
-            </div>
+            </div> -->
             <nav class="navSections">
                 <div class="navGroup">
                     <h3 class="navTitle">Grammar</h3>
@@ -54,14 +52,11 @@
                 </div>
             </nav>
         </aside>
-
         <!-- Content -->
         <main class="mainContent">
-            <nav class="breadcrumb">🏠 > Learn and practise Spanish with Lingolia</nav>
+            <!-- <nav class="breadcrumb">🏠 > Learn and practise Spanish with Lingolia</nav> -->
             <h1 class="pageTitle">Learn and practise Spanish with Lingolia</h1>
-
             <section class="introSection">
-                <h2 class="introHeading">Learn and practise Spanish with Lingolia</h2>
                 <p class="introText">
                     Improve your Spanish with Lingolia’s free content. Revise grammar topics, learn new vocabulary and
                     develop your reading and listening comprehension skills—all for free!
@@ -72,11 +67,9 @@
                     the basics.
                 </p>
                 <div class="illustrationBox">
-                    <img src="image.png"
-                        alt="Illustration" />
+                    <img src="image.png" alt="Illustration" />
                 </div>
             </section>
-
             <section class="cardsSection">
                 <div class="cardBox">
                     <h3>Spanish Grammar ›</h3>
@@ -98,7 +91,31 @@
             </section>
         </main>
     </div>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sideNav = document.getElementById('sideNav');
 
+        // Función para ajustar el estado del menú según el tamaño de la ventana
+        function adjustSidebar() {
+            if (window.innerWidth >= 1024) {
+                // Desktop: abierto por defecto
+                sideNav.classList.add('isVisible');
+            } else {
+                // Mobile/tablet: cerrado por defecto
+                sideNav.classList.remove('isVisible');
+            }
+        }
+
+        // Ajustar al cargar la página
+        adjustSidebar();
+
+        // Ajustar al redimensionar ventana
+        window.addEventListener('resize', adjustSidebar);
+
+        // Toggle con el botón hamburguesa
+        menuToggle.addEventListener('click', () => {
+            sideNav.classList.toggle('isVisible');
+        });
+    </script>
 </body>
-
 </html>

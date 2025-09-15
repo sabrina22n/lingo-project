@@ -1,35 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff;
-    color: #222;
+    background: #fdf4ed;
+    color: #00111d;
+    font-family: "Onest", sans-serif;
 }
 
 /* Header */
 .headerBar {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
+    background: #fdf4ed;
+    border-bottom: 1px solid #00111d42;
 }
 
 .headerContainer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: .75rem 1rem;
+    gap: 16px; /* espacio entre botón y logo */
+    padding: 12px 16px;
 }
 
 .logoBox {
     display: flex;
     align-items: center;
-    gap: .5rem;
-    font-size: 1.1rem;
+    gap: 8px;
+    font-size: 18px;
 }
 
 .menuToggle {
-    font-size: 1.5rem;
+    font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
+}
+
+/* Sidebar base */
+.sideNav {
+    background: #edc29c;
+    padding: 16px;
+    border-right: 1px solid #00111d42;
+    transition: transform 0.3s ease;
 }
 
 /* Layout */
@@ -39,26 +50,27 @@ body {
 }
 
 .sideNav {
-    background: #f9fafb;
-    padding: 1rem;
+    background: #fdf4ed;
+    padding: 16px;
     border-right: 1px solid #eee;
 }
 
 .searchBox {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .searchInput {
     width: 100%;
-    padding: .5rem;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 .navTitle {
-    font-size: .9rem;
-    margin: .75rem 0 .25rem;
-    color: #b91c1c;
+    font-size: 14px;
+    margin: 12px 0 4px;
+    font-weight: bold;
+    color: #900936;
 }
 
 .navGroup ul {
@@ -68,13 +80,13 @@ body {
 }
 
 .navGroup li {
-    margin-bottom: .25rem;
+    margin-bottom: 4px;
 }
 
 .navGroup a {
     text-decoration: none;
-    color: #333;
-    font-size: .85rem;
+    color: #00111d;
+    font-size: 14px;
 }
 
 .navGroup a:hover {
@@ -83,62 +95,64 @@ body {
 
 /* Main content */
 .mainContent {
-    padding: 1rem;
+    padding: 16px;
 }
 
 .breadcrumb {
-    font-size: .8rem;
-    color: #666;
-    margin-bottom: .5rem;
+    font-size: 13px;
+    color: #00111ddd;
+    margin-bottom: 8px;
 }
 
 .pageTitle {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.introHeading {
-    font-size: 1.2rem;
-    margin: .5rem 0;
+    font-size: 24px;
+    color: #15616d;
+    margin-bottom: 16px;
 }
 
 .introText {
-    font-size: .9rem;
-    margin-bottom: .75rem;
+    font-size: 14px;
+    margin-bottom: 12px;
     line-height: 1.4;
 }
 
 .illustrationBox {
     text-align: center;
-    margin: 1.5rem 0;
+    margin: 24px 0;
 }
 
 .illustrationBox img {
-    max-width: 200px;
+    max-width: 400px;
 }
 
 /* Cards */
 .cardsSection {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .cardBox {
     border: 1px solid #ddd;
     border-radius: 6px;
-    padding: 1rem;
-    background: #fafafa;
+    padding: 16px;
+    background: rgba(253, 244, 237, 0.39);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(253, 244, 237, 0.43);
 }
 
 .cardBox h3 {
     margin-top: 0;
-    font-size: 1rem;
-    color: #1e40af;
+    font-size: 16px;
+    font-weight: bold;
+    color: #900936;
 }
 
 .cardBox p {
-    font-size: .85rem;
+    font-size: 14px;
     color: #444;
 }
 
@@ -148,16 +162,47 @@ body {
         flex-direction: row;
     }
 
-    .sideNav {
-        width: 250px;
-        flex-shrink: 0;
-    }
-
     .mainContent {
         flex: 1;
     }
 
     .cardsSection {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile y tablet: menú cerrado por defecto */
+@media(max-width: 1023px) {
+    .sideNav {
+        position: absolute;
+        top: 60px; /* debajo del header */
+        left: 0;
+        width: 220px;
+        height: calc(100% - 60px);
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+    .sideNav.isVisible {
+        transform: translateX(0);
+    }
+}
+
+/* Desktop: menú abierto por defecto */
+@media(min-width: 1024px) {
+    .mainLayout {
+        flex-direction: row;
+    }
+
+    .sideNav {
+        position: relative;
+        width: 250px;
+        flex-shrink: 0;
+        transform: translateX(0);
+    }
+
+    /* Permitir cerrar el menú con la clase isVisible */
+    .sideNav:not(.isVisible) {
+        transform: translateX(-100%);
     }
 }
