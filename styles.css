@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #222;
+}
+
+/* Header */
+.headerBar {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem 1rem;
+}
+
+.logoBox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.1rem;
+}
+
+.menuToggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Layout */
+.mainLayout {
+    display: flex;
+    flex-direction: column;
+}
+
+.sideNav {
+    background: #f9fafb;
+    padding: 1rem;
+    border-right: 1px solid #eee;
+}
+
+.searchBox {
+    margin-bottom: 1rem;
+}
+
+.searchInput {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.navTitle {
+    font-size: .9rem;
+    margin: .75rem 0 .25rem;
+    color: #b91c1c;
+}
+
+.navGroup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navGroup li {
+    margin-bottom: .25rem;
+}
+
+.navGroup a {
+    text-decoration: none;
+    color: #333;
+    font-size: .85rem;
+}
+
+.navGroup a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+.mainContent {
+    padding: 1rem;
+}
+
+.breadcrumb {
+    font-size: .8rem;
+    color: #666;
+    margin-bottom: .5rem;
+}
+
+.pageTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.introHeading {
+    font-size: 1.2rem;
+    margin: .5rem 0;
+}
+
+.introText {
+    font-size: .9rem;
+    margin-bottom: .75rem;
+    line-height: 1.4;
+}
+
+.illustrationBox {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.illustrationBox img {
+    max-width: 200px;
+}
+
+/* Cards */
+.cardsSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.cardBox {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    background: #fafafa;
+}
+
+.cardBox h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #1e40af;
+}
+
+.cardBox p {
+    font-size: .85rem;
+    color: #444;
+}
+
+/* Desktop */
+@media(min-width: 768px) {
+    .mainLayout {
+        flex-direction: row;
+    }
+
+    .sideNav {
+        width: 250px;
+        flex-shrink: 0;
+    }
+
+    .mainContent {
+        flex: 1;
+    }
+
+    .cardsSection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
