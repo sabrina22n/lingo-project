@@ -3,15 +3,15 @@
 
 body {
     margin: 0;
-    background: #fdf4ed;
-    color: #00111d;
+    background: #fff9f0;
+    color: #381f11;
     font-family: "Onest", sans-serif;
 }
 
 /* Header */
 .headerBar {
-    background: #fdf4ed;
-    border-bottom: 1px solid #00111d42;
+    background: #fff9f0;
+    border-bottom: 1px solid #381f1127;
 }
 
 .headerContainer {
@@ -35,24 +35,28 @@ body {
     cursor: pointer;
 }
 
-/* Sidebar base */
-.sideNav {
-    background: #edc29c;
-    padding: 16px;
-    border-right: 1px solid #00111d42;
-    transition: transform 0.3s ease;
-}
-
 /* Layout */
 .mainLayout {
     display: flex;
+    transition: all 0.3s ease;
     flex-direction: column;
 }
 
+
+/* Sidebar base */
+
 .sideNav {
-    background: #fdf4ed;
+    background: #fff9f0;
     padding: 16px;
-    border-right: 1px solid #eee;
+    border-right: 1px solid #381f1127;
+    width: 250px; /* ancho fijo del menú */
+    transition: all 0.3s ease;
+    color: #381f11;
+}
+
+.sideNav:not(.isVisible) {
+    width: 0;
+    overflow: hidden;
 }
 
 .searchBox {
@@ -70,7 +74,7 @@ body {
     font-size: 14px;
     margin: 12px 0 4px;
     font-weight: bold;
-    color: #900936;
+    color: #892b98;
 }
 
 .navGroup ul {
@@ -85,8 +89,8 @@ body {
 
 .navGroup a {
     text-decoration: none;
-    color: #00111d;
     font-size: 14px;
+    color: #381f11;
 }
 
 .navGroup a:hover {
@@ -95,18 +99,20 @@ body {
 
 /* Main content */
 .mainContent {
-    padding: 16px;
+    padding: 42px;
+    flex: 1;
+    transition: all 0.3s ease;
 }
 
 .breadcrumb {
     font-size: 13px;
-    color: #00111ddd;
+    color: #381f11;
     margin-bottom: 8px;
 }
 
 .pageTitle {
     font-size: 24px;
-    color: #15616d;
+    color: #b81427;
     margin-bottom: 16px;
 }
 
@@ -148,12 +154,12 @@ body {
     margin-top: 0;
     font-size: 16px;
     font-weight: bold;
-    color: #900936;
+    color: #ff7d14;
 }
 
 .cardBox p {
     font-size: 14px;
-    color: #444;
+    color: #381f11;
 }
 
 /* Desktop */

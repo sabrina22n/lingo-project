@@ -94,15 +94,18 @@
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const sideNav = document.getElementById('sideNav');
+        const mainContent = document.querySelector('.mainContent');
 
         // Función para ajustar el estado del menú según el tamaño de la ventana
         function adjustSidebar() {
             if (window.innerWidth >= 1024) {
                 // Desktop: abierto por defecto
                 sideNav.classList.add('isVisible');
+                mainContent.style.width = 'calc(100% - 250px)';
             } else {
                 // Mobile/tablet: cerrado por defecto
                 sideNav.classList.remove('isVisible');
+                mainContent.style.width = '100%';
             }
         }
 
@@ -115,6 +118,14 @@
         // Toggle con el botón hamburguesa
         menuToggle.addEventListener('click', () => {
             sideNav.classList.toggle('isVisible');
+
+            if (window.innerWidth >= 1024) {
+                if (sideNav.classList.contains('isVisible')) {
+                    mainContent.style.width = 'calc(100% - 250px)';
+                } else {
+                    mainContent.style.width = '100%';
+                }
+            }
         });
     </script>
 </body>
