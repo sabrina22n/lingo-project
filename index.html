@@ -1,131 +1,298 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lingolia Modelo</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little Learners — HTML only (no SASS)</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="headerBar">
-        <div class="headerContainer">
-            <!-- Botón hamburguesa a la izquierda -->
-            <button id="menuToggle" class="menuToggle">☰</button>
-
-            <div class="logoBox">
-                <span class="logoIcon">📘</span>
-                <span class="logoText">lingolia <strong>español</strong></span>
+    <div class="wrap">
+        <header>
+            <div class="brand" aria-hidden="false">
+                <div class="logo">LL</div>
+                <div>
+                    <div style="font-weight:800">Little Learners</div>
+                    <div style="font-size:12px;color:var(--muted)">Early Learning</div>
+                </div>
             </div>
-        </div>
-    </header>
-    <div class="mainLayout">
-        <!-- Sidebar -->
-        <aside id="sideNav" class="sideNav">
-            <!-- <div class="searchBox">
-                <input type="text" placeholder="Search" class="searchInput">
-            </div> -->
-            <nav class="navSections">
-                <div class="navGroup">
-                    <h3 class="navTitle">Grammar</h3>
-                    <ul>
-                        <li><a href="#">Tenses Indicative</a></li>
-                        <li><a href="#">Tenses Subjunctive</a></li>
-                        <li><a href="#">Verb Conjugator</a></li>
-                        <li><a href="#">Articles</a></li>
-                    </ul>
-                </div>
-                <div class="navGroup">
-                    <h3 class="navTitle">Vocabulary</h3>
-                    <ul>
-                        <li><a href="#">Numbers, Dates</a></li>
-                        <li><a href="#">Countries</a></li>
-                        <li><a href="#">Homonyms</a></li>
-                    </ul>
-                </div>
-                <div class="navGroup">
-                    <h3 class="navTitle">Listening/Reading</h3>
-                    <ul>
-                        <li><a href="#">Reading</a></li>
-                        <li><a href="#">Listening</a></li>
-                    </ul>
-                </div>
+            <nav aria-label="Main navigation">
+                <div class="navlink">Home</div>
+                <div class="navlink">About Us</div>
+                <div class="navlink">Academics</div>
+                <div class="navlink">Admissions</div>
+                <div class="navlink">Student Life</div>
+                <div class="navlink">Contact</div>
             </nav>
-        </aside>
-        <!-- Content -->
-        <main class="mainContent">
-            <!-- <nav class="breadcrumb">🏠 > Learn and practise Spanish with Lingolia</nav> -->
-            <h1 class="pageTitle">Learn and practise Spanish with Lingolia</h1>
-            <section class="introSection">
-                <p class="introText">
-                    Improve your Spanish with Lingolia’s free content. Revise grammar topics, learn new vocabulary and
-                    develop your reading and listening comprehension skills—all for free!
-                </p>
-                <p class="introText">
-                    Our articles about grammar are packed with examples and translations to help you understand even the
-                    trickiest of topics. Each article comes with one free interactive exercise where you can practise
-                    the basics.
-                </p>
-                <div class="illustrationBox">
-                    <img src="image.png" alt="Illustration" />
+            <button class="cta">Contact</button>
+        </header>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-left" role="img" aria-label="Decorative illustration">
+                <!-- Replace this with <img src="..." alt=""> if you have the PNG -->
+            </div>
+            <div class="hero-right">
+                <div class="eyebrow">Aprende Español</div>
+                <h1 class="title">Aprende <span class="accent">Español</span> con Sabrina</h1>
+                <p class="desc">My lessons vary according to the proficiency level of each student. The goal for each
+                    student is individual and I try to organize a study plan that is different according to each of my
+                    students' needs. My teaching style is based on the practice of oral communication, I also like to
+                    organize discussions and debates that help to encourage the development of the conversation, for the
+                    student to feel comfortable and know that they shouldn't be afraid of making any mistakes because
+                    I'm there to help them.</p>
+                <div class="stats" aria-hidden="false">
+                    <div class="stat">
+                        <div class="num">+4.200</div>
+                        <div class="lbl">Lessons</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">+430</div>
+                        <div class="lbl">Students</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">⭐ 5.0</div>
+                        <div class="lbl">Rating</div>
+                    </div>
                 </div>
-            </section>
-            <section class="cardsSection">
-                <div class="cardBox">
-                    <h3>Spanish Grammar ›</h3>
-                    <p>Everything you need to know about Spanish grammar in one place. Explanations, examples and
-                        exercises — easy!</p>
+            </div>
+        </section>
+        <!-- Lessons -->
+        <section class="section">
+            <h2>Lessons</h2>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit, cum nec fringilla mauris vulputate
+                tortor montes, quam maecenas feugiat urna dapibus malesuada.</p>
+            <div class="cards" aria-live="polite">
+                <article class="card">
+                    <div class="badge">🎓</div>
+                    <h3>About Us</h3>
+                    <div class="progress">
+                        <div class="dots" aria-hidden="true"></div>
+                    </div>
+                    <p>Discover our Mission, Values, and our unwavering commitment to providing the best learning
+                        experience for your child. Learn about our passionate educators and our engaging approach to
+                        early education.</p>
+                    <a class="btn" href="#">Learn More →</a>
+                </article>
+                <article class="card">
+                    <div class="badge">🎓</div>
+                    <h3>Academics</h3>
+                    <div class="progress">
+                        <div class="dots" aria-hidden="true"></div>
+                    </div>
+                    <p>Dive into our comprehensive academic programs designed to stimulate young minds, foster
+                        creativity, and encourage a love for learning.</p>
+                    <a class="btn" href="#">Learn More →</a>
+                </article>
+
+                <article class="card">
+                    <div class="badge">🎓</div>
+                    <h3>About Us</h3>
+                    <div class="progress">
+                        <div class="dots" aria-hidden="true"></div>
+                    </div>
+                    <p>Discover our Mission, Values, and our unwavering commitment to providing the best learning
+                        experience for your child.</p>
+                    <a class="btn" href="#">Learn More →</a>
+                </article>
+                <article class="card">
+                    <div class="badge">🎓</div>
+                    <h3>Academics</h3>
+                    <div class="progress">
+                        <div class="dots" aria-hidden="true"></div>
+                    </div>
+                    <p>Dive into our comprehensive academic programs designed to stimulate young minds, foster
+                        creativity, and encourage a love for learning.</p>
+                    <a class="btn" href="#">Learn More →</a>
+                </article>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="test-section">
+            <div class="pill">Their Happy Words 😊</div>
+            <h2>Our Testimonials</h2>
+            <p class="lead">Our testimonials are heartfelt reflections of the nurturing environment we provide, where
+                children flourish both academically and emotionally.</p>
+            <div class="test-slider" aria-live="polite">
+                <button class="arrow" id="prev" aria-label="Previous">←</button>
+                <div class="test-track" id="track">
+                    <div class="test-card">
+                        <div class="avatar">JB</div>
+                        <strong>Jennifer B</strong>
+                        <div class="stars">★★★★★</div>
+                        <p>Little Learners Academy has been a second home for my child. The caring staff and engaging
+                            programs have made her excited to go to school every day!</p>
+                    </div>
+                    <div class="test-card">
+                        <div class="avatar">DK</div>
+                        <strong>David K</strong>
+                        <div class="stars">★★★★★</div>
+                        <p>Choosing Little Learners Academy for my daughter was the best decision. She has thrived in
+                            their nurturing and stimulating environment.</p>
+                    </div>
+                    <div class="test-card">
+                        <div class="avatar">EL</div>
+                        <strong>Emily L</strong>
+                        <div class="stars">★★★★★</div>
+                        <p>My son's social and academic growth has been remarkable since joining Little Learners
+                            Academy. I am grateful for the supportive and dedicated teachers.</p>
+                    </div>
                 </div>
-                <div class="cardBox">
-                    <h3>Vocabulary ›</h3>
-                    <p>Learn the basics like numbers or advanced phrases. Our vocabulary section has you covered!</p>
+                <button class="arrow" id="next" aria-label="Next">→</button>
+            </div>
+        </section>
+        <!-- FAQ -->
+        <section class="section">
+            <div style="text-align:center">
+                <div class="pill">Solutions For The Doubts</div>
+                <h2>Frequently Asked Questions</h2>
+                <p class="lead">Find all the essential information you need in our FAQ section, designed to address the
+                    most frequently asked questions and help you make informed decisions for your child's education.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item open">
+                    <div class="faq-q">
+                        <div>What are the school hours at Little Learners Academy?</div>
+                        <button class="toggle">−</button>
+                    </div>
+                    <div class="faq-a">
+                        Our school hours are from 8:00 AM to 3:00 PM, Monday to Friday. We also offer extended care
+                        options for parents who need early drop-off or late pick-up.
+                        <div style="margin-top:10px"><a class="learn-more" href="#">Learn More →</a></div>
+                    </div>
                 </div>
-                <div class="cardBox">
-                    <h3>Reading & Listening ›</h3>
-                    <p>Practise your Spanish skills with exercises and curated texts.</p>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <div>How do you handle food allergies and dietary restrictions?</div>
+                        <button class="toggle">+</button>
+                    </div>
+                    <div class="faq-a">We maintain strict allergy policies and work with parents on individualized plans
+                        to keep children safe while participating in meals and activities.</div>
                 </div>
-                <div class="cardBox">
-                    <h3>Writing School ›</h3>
-                    <p>Improve your writing with our clear rules and examples.</p>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <div>Is there a uniform policy for students?</div>
+                        <button class="toggle">+</button>
+                    </div>
+                    <div class="faq-a">There is a simple uniform recommended to make mornings easier for families, but
+                        we are flexible and inclusive in our approach.</div>
                 </div>
-            </section>
-        </main>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <div>What is the teacher-to-student ratio at Little Learners Academy?</div>
+                        <button class="toggle">+</button>
+                    </div>
+                    <div class="faq-a">We maintain a low student-to-teacher ratio to ensure personalized attention and
+                        safe supervision at all times.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <div>What extracurricular activities are available for students?</div>
+                        <button class="toggle">+</button>
+                    </div>
+                    <div class="faq-a">We offer art, music, sports, language clubs and seasonal enrichment programs to
+                        broaden each child's learning experience.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <div>How do I apply for admission to Little Learners Academy?</div>
+                        <button class="toggle">+</button>
+                    </div>
+                    <div class="faq-a">Visit our Admissions page, complete the application form, and contact our
+                        admissions coordinator for next steps.</div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-grid">
+                <div class="foot-col">
+                    <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px">
+                        <div class="logo" style="width:40px;height:40px;border-radius:8px">LL</div>
+                        <div>
+                            <strong>Little Learners</strong>
+                            <div style="font-size:13px;color:var(--muted)">We believe in the power of play to foster
+                                creativity, problem-solving skills, and imagination.</div>
+                        </div>
+                    </div>
+                    <div class="small">hello@littlelearners.com<br />+91 9813 23 2309<br />Somewhere in the World</div>
+                </div>
+                <div class="foot-col">
+                    <strong>Explore</strong>
+                    <div class="small">Home<br />Features<br />Our Testimonials<br />FAQ</div>
+                </div>
+                <div class="foot-col">
+                    <strong>About</strong>
+                    <div class="small">Our Mission<br />Our Vision<br />Awards and Recognitions<br />History</div>
+                </div>
+                <div class="foot-col">
+                    <strong>Academics</strong>
+                    <div class="small">Special Features<br />Gallery<br />Contact Us<br />Map & Direction</div>
+                </div>
+            </div>
+            <div
+                style="margin-top:16px;border-top:1px solid var(--stroke);padding-top:12px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+                <div>Terms of Service | Privacy Policy | Cookie Policy</div>
+                <div>© 2023 Little Learners Academy. All rights reserved.</div>
+            </div>
+        </footer>
     </div>
     <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const sideNav = document.getElementById('sideNav');
-        const mainContent = document.querySelector('.mainContent');
-
-        // Función para ajustar el estado del menú según el tamaño de la ventana
-        function adjustSidebar() {
-            if (window.innerWidth >= 1024) {
-                // Desktop: abierto por defecto
-                sideNav.classList.add('isVisible');
-                mainContent.style.width = 'calc(100% - 250px)';
-            } else {
-                // Mobile/tablet: cerrado por defecto
-                sideNav.classList.remove('isVisible');
-                mainContent.style.width = '100%';
+        // Testimonial slider (simple transform-based)
+        (function () {
+            const track = document.getElementById('track');
+            const next = document.getElementById('next');
+            const prev = document.getElementById('prev');
+            const cards = track.children;
+            let index = 0;
+            // compute step (card width + gap). handle responsive
+            function cardStep() {
+                const style = window.getComputedStyle(cards[0]);
+                const gap = 18; // same as CSS
+                return Math.round(cards[0].getBoundingClientRect().width + gap);
             }
-        }
-
-        // Ajustar al cargar la página
-        adjustSidebar();
-
-        // Ajustar al redimensionar ventana
-        window.addEventListener('resize', adjustSidebar);
-
-        // Toggle con el botón hamburguesa
-        menuToggle.addEventListener('click', () => {
-            sideNav.classList.toggle('isVisible');
-
-            if (window.innerWidth >= 1024) {
-                if (sideNav.classList.contains('isVisible')) {
-                    mainContent.style.width = 'calc(100% - 250px)';
-                } else {
-                    mainContent.style.width = '100%';
-                }
+            function maxVisible() {
+                const parentWidth = track.parentElement.clientWidth;
+                const step = cardStep();
+                return Math.max(1, Math.floor(parentWidth / step));
             }
+            function update() {
+                const step = cardStep();
+                const maxIdx = Math.max(0, cards.length - maxVisible());
+                if (index > maxIdx) index = maxIdx;
+                track.style.transform = 'translateX(' + (-index * step) + 'px)';
+            }
+            next.addEventListener('click', () => {
+                index = Math.min(index + 1, cards.length - 1);
+                update();
+            });
+            prev.addEventListener('click', () => {
+                index = Math.max(0, index - 1);
+                update();
+            });
+
+            // touch support (swipe)
+            let startX = 0, delta = 0;
+            track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+            track.addEventListener('touchmove', e => delta = e.touches[0].clientX - startX);
+            track.addEventListener('touchend', e => {
+                if (delta < -40) next.click();
+                if (delta > 40) prev.click();
+                delta = 0;
+            });
+            // reposition on resize
+            window.addEventListener('resize', () => requestAnimationFrame(update));
+            // initial
+            requestAnimationFrame(update);
+        })();
+        // FAQ accordion
+        document.querySelectorAll('.faq-item .faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                item.classList.toggle('open');
+                const btn = q.querySelector('.toggle');
+                if (btn) btn.textContent = item.classList.contains('open') ? '−' : '+';
+            });
         });
     </script>
 </body>
