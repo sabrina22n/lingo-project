@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,33 +8,41 @@
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="wrap">
         <header>
             <div class="brand" aria-hidden="false">
-                <div class="logo">LL</div>
+                <div class="logo">SN</div>
                 <div>
-                    <div style="font-weight:800">Little Learners</div>
-                    <div style="font-size:12px;color:var(--muted)">Early Learning</div>
+                    <div style="font-weight:800">Teacher Sabrina Nuñez</div>
+                    <div style="font-size:12px;color:var(--muted)">Italki</div>
                 </div>
             </div>
             <nav aria-label="Main navigation">
                 <div class="navlink">Home</div>
-                <div class="navlink">About Us</div>
-                <div class="navlink">Academics</div>
-                <div class="navlink">Admissions</div>
-                <div class="navlink">Student Life</div>
-                <div class="navlink">Contact</div>
+                <div class="navlink">About Me</div>
+                <div class="navlink">Grammar</div>
+                <div class="navlink">Vocabulary</div>
+                <div class="navlink">Verb Conjugator</div>
             </nav>
-            <button class="cta">Contact</button>
+            <button class="cta">Italki Profile</button>
         </header>
+        <section class="glass-cube"></section>
+        <!-- BACKGROUND -->
+        <div class="background">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
         <!-- HERO -->
         <section class="hero">
             <div class="hero-left" role="img" aria-label="Decorative illustration">
                 <!-- Replace this with <img src="..." alt=""> if you have the PNG -->
             </div>
             <div class="hero-right">
-                <div class="eyebrow">Aprende Español</div>
                 <h1 class="title">Aprende <span class="accent">Español</span> con Sabrina</h1>
                 <p class="desc">My lessons vary according to the proficiency level of each student. The goal for each
                     student is individual and I try to organize a study plan that is different according to each of my
@@ -294,6 +303,35 @@
                 if (btn) btn.textContent = item.classList.contains('open') ? '−' : '+';
             });
         });
+
+
+        // BACKGROUND
+        const colors = ['#F7BA2C', '#F08344', '#E9295C'];
+        const spans = document.querySelectorAll('.background span');
+        const particleSize = 20; // vmin
+        const baseDuration = 6; // s
+
+        spans.forEach(span => {
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const top = Math.random() * 100;
+            const left = Math.random() * 100;
+            const duration = (Math.random() * baseDuration + 10).toFixed(1); // 10s + random 0-6s
+            const delay = -(Math.random() * (baseDuration + 10)).toFixed(1); // -1*(0-16s)
+            const originX = (Math.random() * 50 - 25).toFixed(1);
+            const originY = (Math.random() * 50 - 25).toFixed(1);
+            const blurRadius = ((Math.random() + 0.5) * particleSize * 0.5).toFixed(1);
+            const x = Math.random() > 0.5 ? -1 : 1;
+            const boxShadowX = particleSize * 2 * x;
+
+            span.style.color = color;
+            span.style.top = `${top}%`;
+            span.style.left = `${left}%`;
+            span.style.animationDuration = `${duration}s`;
+            span.style.animationDelay = `${delay}s`;
+            span.style.transformOrigin = `${originX}vw ${originY}vh`;
+            span.style.boxShadow = `${boxShadowX}vmin 0 ${blurRadius}vmin currentColor`;
+        });
     </script>
 </body>
+
 </html>

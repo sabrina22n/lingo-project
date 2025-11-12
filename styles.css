@@ -1,8 +1,8 @@
 :root {
-    --bg: #fdeee7;
+    --bg: #fce4d7;
     --card: #fff;
-    --accent: #f7a77d;
-    --accent-2: #ff8c4d;
+    --accent: #E9295C;
+    --accent-2: #F08344;
     --muted: #9a8f8a;
     --text: #111;
     --shadow: 6px 6px 0 rgba(0, 0, 0, 0.08);
@@ -21,6 +21,41 @@ body {
     background: var(--bg);
     color: var(--text);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    /* bloquea solo horizontal */
+    overflow-y: auto;
+    /* permite scroll vertical */
+}
+
+.background {
+    position: absolute;
+    /* no fija, sigue el flujo de la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    /* para cubrir toda la página */
+    z-index: -1;
+
+}
+
+.background span {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 20vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+    /* para no bloquear clicks ni scroll */
+}
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
 }
 
 .wrap {
@@ -41,18 +76,25 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: var(--card);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
     padding: 10px 14px;
-    border-radius: 10px;
-    border: 2px solid var(--stroke);
-    box-shadow: var(--shadow);
 }
 
 .brand .logo {
     width: 36px;
     height: 36px;
     border-radius: 8px;
-    background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    background: hsla(42, 93%, 57%, 1);
+    background: radial-gradient(circle, hsla(42, 93%, 57%, 1) 0%, hsla(22, 85%, 60%, 1) 51%, hsla(344, 81%, 54%, 1) 100%);
+    background: -moz-radial-gradient(circle, hsla(42, 93%, 57%, 1) 0%, hsla(22, 85%, 60%, 1) 51%, hsla(344, 81%, 54%, 1) 100%);
+    background: -webkit-radial-gradient(circle, hsla(42, 93%, 57%, 1) 0%, hsla(22, 85%, 60%, 1) 51%, hsla(344, 81%, 54%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F7BA2C", endColorstr="#F08344", GradientType=1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,10 +113,14 @@ nav {
 }
 
 .navlink {
-    background: var(--card);
     padding: 10px 14px;
-    border-radius: 6px;
-    border: 1px solid var(--stroke);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
     font-weight: 600;
     font-size: 14px;
     color: var(--text);
@@ -100,7 +146,11 @@ nav {
 .hero-left {
     width: 430px;
     height: 420px;
-    background: linear-gradient(180deg, #ffcfb6, #f7a77d);
+    background: hsla(42, 93%, 57%, 1);
+    background: radial-gradient(circle, hsla(42, 93%, 57%, 1) 0%, hsla(22, 85%, 60%, 1) 51%, hsla(344, 81%, 54%, 1) 100%);
+    background: -moz-radial-gradient(circle, hsla(42, 93%, 57%, 1) 0%, hsla(22, 85%, 60%, 1) 51%, hsla(344, 81%, 54%, 1) 100%);
+    background: -webkit-radial-gradient(circle, hsla(42, 93%, 57%, 1) 0%, hsla(22, 85%, 60%, 1) 51%, hsla(344, 81%, 54%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F7BA2C", endColorstr="#F08344", GradientType=1);
     border-radius: 16px;
     border: 8px solid rgba(0, 0, 0, 0.04);
     box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.08);
@@ -108,38 +158,7 @@ nav {
     flex-shrink: 0;
 }
 
-/* decorative anchors similar to the PNG corners */
-.hero-left::before,
-.hero-left::after {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #fff;
-    border: 2px solid rgba(0, 0, 0, 0.08);
-}
 
-.hero-left::before {
-    left: 10px;
-    top: 10px
-}
-
-.hero-left::after {
-    right: 10px;
-    bottom: 10px
-}
-
-.hero-right {
-    flex: 1;
-    max-width: 700px
-}
-
-.eyebrow {
-    color: var(--muted);
-    font-weight: 700;
-    margin-bottom: 8px
-}
 
 .title {
     font-size: 34px;
@@ -166,6 +185,7 @@ nav {
     padding: 12px;
     background: transparent;
     border-radius: 12px;
+
 }
 
 .stat {
@@ -176,6 +196,13 @@ nav {
     box-shadow: var(--shadow);
     text-align: center;
     min-width: 120px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
 }
 
 .stat .num {
@@ -267,7 +294,7 @@ nav {
     gap: 8px;
     padding: 10px 18px;
     border-radius: 10px;
-    background: linear-gradient(180deg, var(--accent), #f39f78);
+    background: var(--accent-2);
     color: #fff;
     font-weight: 700;
     text-decoration: none;
