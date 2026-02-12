@@ -66,10 +66,19 @@ h3 {
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: 1.1fr .9fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     align-items: end;
+}
+
+.hero .speech,
+.hero .cta {
+    flex: 1 1 55%;
+}
+
+.hero .hero-image {
+    flex: 1 1 40%;
 }
 
 .speech {
@@ -124,10 +133,18 @@ h3 {
 }
 
 .about-grid {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     align-items: center
+}
+
+.about-grid .card {
+    flex: 1 1 60%;
+}
+
+.about-grid .portrait {
+    flex: 1 1 35%;
 }
 
 .card {
@@ -153,9 +170,13 @@ h3 {
 }
 
 .cards-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 14px
+}
+
+.cards-3>* {
+    flex: 1 1 220px;
 }
 
 .center {
@@ -204,11 +225,15 @@ thead th {
 }
 
 .chips {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 12px;
     max-width: 700px;
     margin: 0 auto
+}
+
+.chips .chip {
+    flex: 1 1 calc(50% - 6px);
 }
 
 .chip {
@@ -231,14 +256,19 @@ thead th {
 }
 
 .split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     align-items: start
 }
 
+.split>* {
+    flex: 1 1 320px;
+}
+
 .stack {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 12px
 }
 
@@ -248,10 +278,17 @@ thead th {
     .about-grid,
     .cards-3,
     .split {
-        grid-template-columns: 1fr
+        flex-direction: column
     }
 
-    .chips {
-        grid-template-columns: 1fr
+    .hero .speech,
+    .hero .hero-image,
+    .hero .cta,
+    .about-grid .card,
+    .about-grid .portrait,
+    .cards-3>*,
+    .split>*,
+    .chips .chip {
+        flex-basis: 100%
     }
 }
