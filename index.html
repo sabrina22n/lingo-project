@@ -1,337 +1,180 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Little Learners — HTML only (no SASS)</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clases Online con Sabrina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrap">
-        <header>
-            <div class="brand" aria-hidden="false">
-                <div class="logo">SN</div>
-                <div>
-                    <div style="font-weight:800">Teacher Sabrina Nuñez</div>
-                    <div style="font-size:12px;color:var(--muted)">Italki</div>
-                </div>
-            </div>
-            <nav aria-label="Main navigation">
-                <div class="navlink">Home</div>
-                <div class="navlink">About Me</div>
-                <div class="navlink">Grammar</div>
-                <div class="navlink">Vocabulary</div>
-                <div class="navlink">Verb Conjugator</div>
+    <main class="page">
+        <header class="topbar section">
+            <button class="icon-btn">›</button>
+            <nav class="menu">
+                <a href="#">Gramática</a>
+                <a href="#">Gramática</a>
+                <a href="#">Gramática</a>
+                <a href="#">Gramática</a>
             </nav>
-            <button class="cta">Italki Profile</button>
         </header>
-        <section class="glass-cube"></section>
-        <!-- BACKGROUND -->
-        <div class="background">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-        </div>
 
-        <!-- HERO -->
-        <section class="hero">
-            <div class="hero-left" role="img" aria-label="Decorative illustration">
-                <!-- Replace this with <img src="..." alt=""> if you have the PNG -->
+        <section class="hero section">
+            <div class="speech">
+                <h1>Aprende español<br>con Sabrina</h1>
             </div>
-            <div class="hero-right">
-                <h1 class="title">Aprende <span class="accent">Español</span> con Sabrina</h1>
-                <p class="desc">My lessons vary according to the proficiency level of each student. The goal for each
-                    student is individual and I try to organize a study plan that is different according to each of my
-                    students' needs. My teaching style is based on the practice of oral communication, I also like to
-                    organize discussions and debates that help to encourage the development of the conversation, for the
-                    student to feel comfortable and know that they shouldn't be afraid of making any mistakes because
-                    I'm there to help them.</p>
-                <div class="stats" aria-hidden="false">
-                    <div class="stat">
-                        <div class="num">+4.200</div>
-                        <div class="lbl">Lessons</div>
-                    </div>
-                    <div class="stat">
-                        <div class="num">+430</div>
-                        <div class="lbl">Students</div>
-                    </div>
-                    <div class="stat">
-                        <div class="num">⭐ 5.0</div>
-                        <div class="lbl">Rating</div>
-                    </div>
-                </div>
-            </div>
+            <img class="hero-image"
+                src="https://images.unsplash.com/photo-1633770660568-6c22fbc4be31?auto=format&fit=crop&w=900&q=80"
+                alt="Letras de colores">
+            <a class="cta" href="#">Reserva una clase!</a>
         </section>
-        <!-- Lessons -->
+
+        <section class="band lavender section">
+            <h2>¡Soy la profesora Sabrina!</h2>
+            <div class="about-grid">
+                <article class="card white">
+                    <p>Llevo cinco fantásticos años despertando la curiosidad de los jóvenes por la biología.</p>
+                    <p>Juntos, exploraremos la genética, la ecología y la evolución.</p>
+                    <p>¡Haremos que este año escolar sea fantástico!</p>
+                </article>
+                <img class="portrait"
+                    src="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?auto=format&fit=crop&w=700&q=80"
+                    alt="Sabrina">
+            </div>
+            <p class="more">(ver más)</p>
+        </section>
+
         <section class="section">
-            <h2>Lessons</h2>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit, cum nec fringilla mauris vulputate
-                tortor montes, quam maecenas feugiat urna dapibus malesuada.</p>
-            <div class="cards" aria-live="polite">
-                <article class="card">
-                    <div class="badge">🎓</div>
-                    <h3>About Us</h3>
-                    <div class="progress">
-                        <div class="dots" aria-hidden="true"></div>
-                    </div>
-                    <p>Discover our Mission, Values, and our unwavering commitment to providing the best learning
-                        experience for your child. Learn about our passionate educators and our engaging approach to
-                        early education.</p>
-                    <a class="btn" href="#">Learn More →</a>
+            <h2 class="center">Reseñas</h2>
+            <div class="cards-3">
+                <article class="card orange">
+                    <h3>Nombre</h3>
+                    <p>Excelente profesora y clases claras.</p><small>Fecha</small>
                 </article>
-                <article class="card">
-                    <div class="badge">🎓</div>
-                    <h3>Academics</h3>
-                    <div class="progress">
-                        <div class="dots" aria-hidden="true"></div>
-                    </div>
-                    <p>Dive into our comprehensive academic programs designed to stimulate young minds, foster
-                        creativity, and encourage a love for learning.</p>
-                    <a class="btn" href="#">Learn More →</a>
+                <article class="card lilac">
+                    <h3>Nombre</h3>
+                    <p>Muy paciente y dinámica en cada clase.</p><small>Fecha</small>
                 </article>
+                <article class="card mint">
+                    <h3>Nombre</h3>
+                    <p>Mejoré mucho mi conversación en español.</p><small>Fecha</small>
+                </article>
+            </div>
+            <p class="more">(ver más)</p>
+        </section>
 
-                <article class="card">
-                    <div class="badge">🎓</div>
-                    <h3>About Us</h3>
-                    <div class="progress">
-                        <div class="dots" aria-hidden="true"></div>
-                    </div>
-                    <p>Discover our Mission, Values, and our unwavering commitment to providing the best learning
-                        experience for your child.</p>
-                    <a class="btn" href="#">Learn More →</a>
-                </article>
-                <article class="card">
-                    <div class="badge">🎓</div>
-                    <h3>Academics</h3>
-                    <div class="progress">
-                        <div class="dots" aria-hidden="true"></div>
-                    </div>
-                    <p>Dive into our comprehensive academic programs designed to stimulate young minds, foster
-                        creativity, and encourage a love for learning.</p>
-                    <a class="btn" href="#">Learn More →</a>
-                </article>
+        <section class="band mintband section">
+            <h2>Horario de clases</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8:00</th>
+                            <td>Biología</td>
+                            <td>Biología</td>
+                            <td>Biología</td>
+                            <td>Biología</td>
+                            <td>Seminario</td>
+                        </tr>
+                        <tr>
+                            <th>9:00</th>
+                            <td></td>
+                            <td>Tutoría</td>
+                            <td></td>
+                            <td>Tutoría</td>
+                            <td>Laboratorio</td>
+                        </tr>
+                        <tr>
+                            <th>12:00</th>
+                            <td>Almuerzo</td>
+                            <td>Almuerzo</td>
+                            <td>Almuerzo</td>
+                            <td>Almuerzo</td>
+                            <td>Almuerzo</td>
+                        </tr>
+                        <tr>
+                            <th>15:00</th>
+                            <td></td>
+                            <td>Club</td>
+                            <td></td>
+                            <td>Club</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <p class="more">(ver más)</p>
         </section>
-        <!-- Testimonials -->
-        <section class="test-section">
-            <div class="pill">Their Happy Words 😊</div>
-            <h2>Our Testimonials</h2>
-            <p class="lead">Our testimonials are heartfelt reflections of the nurturing environment we provide, where
-                children flourish both academically and emotionally.</p>
-            <div class="test-slider" aria-live="polite">
-                <button class="arrow" id="prev" aria-label="Previous">←</button>
-                <div class="test-track" id="track">
-                    <div class="test-card">
-                        <div class="avatar">JB</div>
-                        <strong>Jennifer B</strong>
-                        <div class="stars">★★★★★</div>
-                        <p>Little Learners Academy has been a second home for my child. The caring staff and engaging
-                            programs have made her excited to go to school every day!</p>
-                    </div>
-                    <div class="test-card">
-                        <div class="avatar">DK</div>
-                        <strong>David K</strong>
-                        <div class="stars">★★★★★</div>
-                        <p>Choosing Little Learners Academy for my daughter was the best decision. She has thrived in
-                            their nurturing and stimulating environment.</p>
-                    </div>
-                    <div class="test-card">
-                        <div class="avatar">EL</div>
-                        <strong>Emily L</strong>
-                        <div class="stars">★★★★★</div>
-                        <p>My son's social and academic growth has been remarkable since joining Little Learners
-                            Academy. I am grateful for the supportive and dedicated teachers.</p>
-                    </div>
-                </div>
-                <button class="arrow" id="next" aria-label="Next">→</button>
-            </div>
-        </section>
-        <!-- FAQ -->
+
         <section class="section">
-            <div style="text-align:center">
-                <div class="pill">Solutions For The Doubts</div>
-                <h2>Frequently Asked Questions</h2>
-                <p class="lead">Find all the essential information you need in our FAQ section, designed to address the
-                    most frequently asked questions and help you make informed decisions for your child's education.</p>
+            <h2 class="center">Elementos básicos del aula</h2>
+            <p class="pill">Materiales interactivos para una mejor experiencia de clase</p>
+            <div class="chips">
+                <span class="chip lilac">Programa de la clase</span>
+                <span class="chip mint">Tareas y fechas</span>
+                <span class="chip mint">Notas y presentaciones</span>
+                <span class="chip orange">Guías de estudio</span>
+                <span class="chip orange">Lista de lecturas</span>
+                <span class="chip lilac">Tablero colaborativo</span>
             </div>
-            <div class="faq-grid">
-                <div class="faq-item open">
-                    <div class="faq-q">
-                        <div>What are the school hours at Little Learners Academy?</div>
-                        <button class="toggle">−</button>
-                    </div>
-                    <div class="faq-a">
-                        Our school hours are from 8:00 AM to 3:00 PM, Monday to Friday. We also offer extended care
-                        options for parents who need early drop-off or late pick-up.
-                        <div style="margin-top:10px"><a class="learn-more" href="#">Learn More →</a></div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q">
-                        <div>How do you handle food allergies and dietary restrictions?</div>
-                        <button class="toggle">+</button>
-                    </div>
-                    <div class="faq-a">We maintain strict allergy policies and work with parents on individualized plans
-                        to keep children safe while participating in meals and activities.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q">
-                        <div>Is there a uniform policy for students?</div>
-                        <button class="toggle">+</button>
-                    </div>
-                    <div class="faq-a">There is a simple uniform recommended to make mornings easier for families, but
-                        we are flexible and inclusive in our approach.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q">
-                        <div>What is the teacher-to-student ratio at Little Learners Academy?</div>
-                        <button class="toggle">+</button>
-                    </div>
-                    <div class="faq-a">We maintain a low student-to-teacher ratio to ensure personalized attention and
-                        safe supervision at all times.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q">
-                        <div>What extracurricular activities are available for students?</div>
-                        <button class="toggle">+</button>
-                    </div>
-                    <div class="faq-a">We offer art, music, sports, language clubs and seasonal enrichment programs to
-                        broaden each child's learning experience.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q">
-                        <div>How do I apply for admission to Little Learners Academy?</div>
-                        <button class="toggle">+</button>
-                    </div>
-                    <div class="faq-a">Visit our Admissions page, complete the application form, and contact our
-                        admissions coordinator for next steps.</div>
-                </div>
+            <p class="more">(ver más)</p>
+        </section>
+
+        <section class="section">
+            <h2 class="center">Mejora tus habilidades</h2>
+            <div class="cards-3">
+                <article class="card lilac">
+                    <h3>Apoyo al estudio</h3>
+                    <p>Compañeros y tutorías.</p>
+                </article>
+                <article class="card orange">
+                    <h3>Herramientas en línea</h3>
+                    <p>Recursos educativos útiles.</p>
+                </article>
+                <article class="card mint">
+                    <h3>Centro familiar</h3>
+                    <p>Conecta con la comunidad.</p>
+                </article>
+            </div>
+            <p class="more">(ver más)</p>
+        </section>
+
+        <section class="section split">
+            <div>
+                <h2>Más allá del aula</h2>
+                <img class="beyond-image"
+                    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
+                    alt="Actividad escolar">
+            </div>
+            <div class="stack">
+                <article class="card lilac">
+                    <h3>En casa con la ciencia</h3>
+                </article>
+                <article class="card orange">
+                    <h3>El estante de la ciencia</h3>
+                </article>
+                <article class="card mint">
+                    <h3>Deambular y preguntarse</h3>
+                </article>
             </div>
         </section>
-        <!-- Footer -->
-        <footer>
-            <div class="footer-grid">
-                <div class="foot-col">
-                    <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px">
-                        <div class="logo" style="width:40px;height:40px;border-radius:8px">LL</div>
-                        <div>
-                            <strong>Little Learners</strong>
-                            <div style="font-size:13px;color:var(--muted)">We believe in the power of play to foster
-                                creativity, problem-solving skills, and imagination.</div>
-                        </div>
-                    </div>
-                    <div class="small">hello@littlelearners.com<br />+91 9813 23 2309<br />Somewhere in the World</div>
-                </div>
-                <div class="foot-col">
-                    <strong>Explore</strong>
-                    <div class="small">Home<br />Features<br />Our Testimonials<br />FAQ</div>
-                </div>
-                <div class="foot-col">
-                    <strong>About</strong>
-                    <div class="small">Our Mission<br />Our Vision<br />Awards and Recognitions<br />History</div>
-                </div>
-                <div class="foot-col">
-                    <strong>Academics</strong>
-                    <div class="small">Special Features<br />Gallery<br />Contact Us<br />Map & Direction</div>
-                </div>
-            </div>
-            <div
-                style="margin-top:16px;border-top:1px solid var(--stroke);padding-top:12px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-                <div>Terms of Service | Privacy Policy | Cookie Policy</div>
-                <div>© 2023 Little Learners Academy. All rights reserved.</div>
-            </div>
-        </footer>
-    </div>
-    <script>
-        // Testimonial slider (simple transform-based)
-        (function () {
-            const track = document.getElementById('track');
-            const next = document.getElementById('next');
-            const prev = document.getElementById('prev');
-            const cards = track.children;
-            let index = 0;
-            // compute step (card width + gap). handle responsive
-            function cardStep() {
-                const style = window.getComputedStyle(cards[0]);
-                const gap = 18; // same as CSS
-                return Math.round(cards[0].getBoundingClientRect().width + gap);
-            }
-            function maxVisible() {
-                const parentWidth = track.parentElement.clientWidth;
-                const step = cardStep();
-                return Math.max(1, Math.floor(parentWidth / step));
-            }
-            function update() {
-                const step = cardStep();
-                const maxIdx = Math.max(0, cards.length - maxVisible());
-                if (index > maxIdx) index = maxIdx;
-                track.style.transform = 'translateX(' + (-index * step) + 'px)';
-            }
-            next.addEventListener('click', () => {
-                index = Math.min(index + 1, cards.length - 1);
-                update();
-            });
-            prev.addEventListener('click', () => {
-                index = Math.max(0, index - 1);
-                update();
-            });
-
-            // touch support (swipe)
-            let startX = 0, delta = 0;
-            track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-            track.addEventListener('touchmove', e => delta = e.touches[0].clientX - startX);
-            track.addEventListener('touchend', e => {
-                if (delta < -40) next.click();
-                if (delta > 40) prev.click();
-                delta = 0;
-            });
-            // reposition on resize
-            window.addEventListener('resize', () => requestAnimationFrame(update));
-            // initial
-            requestAnimationFrame(update);
-        })();
-        // FAQ accordion
-        document.querySelectorAll('.faq-item .faq-q').forEach(q => {
-            q.addEventListener('click', () => {
-                const item = q.parentElement;
-                item.classList.toggle('open');
-                const btn = q.querySelector('.toggle');
-                if (btn) btn.textContent = item.classList.contains('open') ? '−' : '+';
-            });
-        });
-
-
-        // BACKGROUND
-        const colors = ['#F7BA2C', '#F08344', '#E9295C'];
-        const spans = document.querySelectorAll('.background span');
-        const particleSize = 20; // vmin
-        const baseDuration = 6; // s
-
-        spans.forEach(span => {
-            const color = colors[Math.floor(Math.random() * colors.length)];
-            const top = Math.random() * 100;
-            const left = Math.random() * 100;
-            const duration = (Math.random() * baseDuration + 10).toFixed(1); // 10s + random 0-6s
-            const delay = -(Math.random() * (baseDuration + 10)).toFixed(1); // -1*(0-16s)
-            const originX = (Math.random() * 50 - 25).toFixed(1);
-            const originY = (Math.random() * 50 - 25).toFixed(1);
-            const blurRadius = ((Math.random() + 0.5) * particleSize * 0.5).toFixed(1);
-            const x = Math.random() > 0.5 ? -1 : 1;
-            const boxShadowX = particleSize * 2 * x;
-
-            span.style.color = color;
-            span.style.top = `${top}%`;
-            span.style.left = `${left}%`;
-            span.style.animationDuration = `${duration}s`;
-            span.style.animationDelay = `${delay}s`;
-            span.style.transformOrigin = `${originX}vw ${originY}vh`;
-            span.style.boxShadow = `${boxShadowX}vmin 0 ${blurRadius}vmin currentColor`;
-        });
-    </script>
+    </main>
 </body>
 
 </html>
